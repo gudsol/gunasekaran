@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    #demo1,#demo2{
+      color: yellowgreen;
+      font-size: 20px;
+    }
+  </style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>two</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <button onclick="result()">Click Here</button>
+    <script>
+        var a= document.getElementById('demo');
+        var b = document.getElementById('demo1');
+        var c = document.getElementById('demo2');
+        var number = 5;
+
+function Factorial(number) {
+            var ans = 1;
+for (var i = 2; i <= number; i++)
+                ans = ans * i;
+            return ans;
+        }
+        function find(number){
+            var sum=0,count=0,a,b;
+            sum = Factorial(number);
+            while(sum>0){
+                b=sum%10;
+                sum=parseInt(sum/10);
+                if(b==0)
+                {
+                    count++;
+                }
+                return count;
+            }
+}
+function result() {
+            a.innerHTML = "number = " + number;
+            b.innerHTML ="Factorial =" + Factorial(number);
+            c.innerHTML ="count =" + find(number);
+
+        } 
+    </script>
+</body>
+
+</html>

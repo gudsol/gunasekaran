@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    h1{
+      color:black;
+      font-size: 15px;
+    }
+    h2{
+      color: blue;
+      font-size: 30px;
+    }
+  </style>
+  <head>
+    <title>vowels count</title>
+  </head>
+  <body>
+      <h1>Display your Name on Webpage , display all of vowels your name has when "calculateVowels" Button is clicked  and also add a button which when clicked will take me to github your github repo.</h1>
+      <p>Gunasekaran</p>
+      <p>Total_Vowels_count_in_Given_Name</p>
+      <h2 id='demo'></h3>
+      <script >
+        function vowel_count() {
+               
+                var n="GUNASEKARAN";
+                var a = 'aAeEiIoOuU';
+                var count = 0;
+
+                      for (var i = 0; i < n.length; i++) {
+                    if (a.indexOf(n[i]) !== -1) {
+                        count += 1;
+                    }
+                  }
+                return count;
+        }
+      </script>
+      <button type ="button" onclick='document.getElementById("demo").innerHTML = vowel_count()'>Vowels_count</button> 
+      <a href="https://github.com/gudsol/gunasekaran.git">GIT</a>
+  </body>
+</html>
